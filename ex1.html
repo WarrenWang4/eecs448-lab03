@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title> EX 1 </title>
+	</head>
+
+	<body>
+    	<input type="password" placeholder="Enter Password" id="password1" required>
+   		<input type="password" placeholder="Confirm Password" id="password2" required>
+   		<button type="submit" class="registerbtn" onclick="validatePassword()">Validate</button>
+   	</body>
+</html>
+
+<script>
+	function validatePassword() 
+	{
+		let password1 = document.getElementById("password1").value;
+		let password2 = document.getElementById("password2").value;
+		if(password1.length == 0 || password2.length == 0)
+		{
+			alert("Please fill in blanks");
+		}
+		else if(password1.length < 8 || password2.length < 8 )
+		{
+			alert("Password length has to be at least a length of 8");
+		} 
+		else if (password1 != password2) 
+		{
+			alert("Passwords do not match");
+		}
+		else 
+		{
+			alert("Success");
+		}
+	}
+</script>

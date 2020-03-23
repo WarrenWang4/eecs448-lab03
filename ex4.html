@@ -1,0 +1,61 @@
+<style>
+	#dummyText {
+		border-style: solid;
+	}
+</style>
+
+<html>
+	<head>
+		<title> EX 4 </title>
+	</head>
+
+	<body>
+		<p id="dummyText">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</p>
+		<div id="div1">
+			<label for='border'>Border Color</label>
+		    <input type='text', id='borderC'></input>
+		    <br>
+		    <label for='border'>Border Width</label>
+		    <input type='text', id='borderW'></input>
+		    <br>
+		    <label for='backgroundcolor'>Background Color</label>
+		    <input type='text', id='backgroundColor'></input>
+		    <br>
+		    <button onclick="change()">Change</button>	
+		</div>
+   	</body>
+</html>
+
+
+<script>
+	function change(){
+		let borderC = String(document.getElementById('borderC').value);
+		let borderW = String(document.getElementById('borderW').value);
+		let backgroundColor = String(document.getElementById('backgroundColor').value);
+
+
+		document.getElementById("dummyText").style.borderWidth = borderW;
+
+		if(borderC == 'red'){
+			document.getElementById("dummyText").style.borderColor = "red";
+		}
+		else if(borderC == 'green'){
+			document.getElementById("dummyText").style.borderColor = "green";
+		}
+		else if(borderC == 'blue'){
+			document.getElementById("dummyText").style.borderColor = "blue";
+		}
+
+		if(backgroundColor == 'red'){
+			document.getElementById("dummyText").style.background = "red";
+		}
+		else if(backgroundColor == 'green'){
+			document.getElementById("dummyText").style.background = "green";
+		}
+		else if(backgroundColor == 'blue'){
+			document.getElementById("dummyText").style.background = "blue";
+		}
+	}
+</script>
